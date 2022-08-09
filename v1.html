@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Kinklist</title>
+        <title>Paralist</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
-        <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABx0RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzIENTNui8sowAAAAWdEVYdENyZWF0aW9uIFRpbWUAMTAvMjEvMTV5ehY1AAAAZElEQVQ4jaWTwQ3AIAwDbcT+I9f9hjYQA/mAkO7igKAACWdFAF0A2gb0hP0uCyTATyAJSoaK5xGyEmTC9lktmORUdAQvBQ5cJshktoDk0HkmKRNUEmuE6ztYVXe7bT+jW7z9zi8qYiodCjCHKgAAAABJRU5ErkJggg==">
+        <link rel="icon" type="image/x-icon" href="https://creazilla-store.fra1.digitaloceanspaces.com/emojis/53086/banana-emoji-clipart-md.png">
         <style>
             body {
                 font-family: 'Verdana', 'Arial';
@@ -256,7 +256,7 @@
                 display: block;
                 clear: both;
             }
-            .kinkCategory {
+            .ParaCategory {
                 
             }
             .col {
@@ -302,7 +302,7 @@
                 background-color: rgba(0, 0, 0, 0.8);
                 display: none;
             }
-            #EditOverlay #Kinks {
+            #EditOverlay #Paras {
                 box-sizing: border-box;
                 position: absolute;
                 top: 10px;
@@ -315,7 +315,7 @@
                 border-radius: 5px;
                 font-family: monospace, 'Courier new', Courier;
             }
-            #EditOverlay #KinksOK {
+            #EditOverlay #ParasOK {
                 box-sizing: border-box;
                 position: absolute;
                 bottom: 10px;
@@ -350,22 +350,22 @@
                 text-align: left;
                 max-width: 100%;
             }
-            #InputOverlay .widthWrapper #InputCurrent, #InputOverlay .widthWrapper .kink-simple {
+            #InputOverlay .widthWrapper #InputCurrent, #InputOverlay .widthWrapper .Para-simple {
                 display: block;
                 box-sizing: border-box;
                 padding: 10px;
                 background-color: #EEE;
             }
-            #InputOverlay .widthWrapper .kink-simple {
+            #InputOverlay .widthWrapper .Para-simple {
                 position: relative;
                 height: 40px;
                 line-height: 20px;
                 cursor: pointer;
             }
-            #InputOverlay .widthWrapper .kink-simple .choice {
+            #InputOverlay .widthWrapper .Para-simple .choice {
                 margin-right: 5px;
             }
-            #InputOverlay .widthWrapper .kink-simple .txt-category {
+            #InputOverlay .widthWrapper .Para-simple .txt-category {
                 position: absolute;
                 right: 5px;
                 top: 5px;
@@ -375,61 +375,61 @@
                 opacity: 0.6;
                 line-height: 1em;
             }
-            #InputOverlay .widthWrapper .kink-simple .txt-field, #InputOverlay .widthWrapper .kink-simple .txt-kink {
+            #InputOverlay .widthWrapper .Para-simple .txt-field, #InputOverlay .widthWrapper .Para-simple .txt-Para {
                 vertical-align: middle;
             }
-            #InputOverlay .widthWrapper .kink-simple .txt-field:empty {
+            #InputOverlay .widthWrapper .Para-simple .txt-field:empty {
                 display: none;
             }
-            #InputOverlay .widthWrapper .kink-simple .txt-field:before {
+            #InputOverlay .widthWrapper .Para-simple .txt-field:before {
                 content: '(';
             }
-            #InputOverlay .widthWrapper .kink-simple .txt-field:after {
+            #InputOverlay .widthWrapper .Para-simple .txt-field:after {
                 content: ') ';
             }
             
-            #InputOverlay .widthWrapper #InputPrevious .kink-simple:first-child,
-            #InputOverlay .widthWrapper #InputNext .kink-simple:nth-child(3) {
+            #InputOverlay .widthWrapper #InputPrevious .Para-simple:first-child,
+            #InputOverlay .widthWrapper #InputNext .Para-simple:nth-child(3) {
                 background-color: #BBB;
                 font-size: 10px;
                 margin-left: 12px;
                 margin-right: 12px;
                 height: 33px;
             }
-            #InputOverlay .widthWrapper #InputPrevious .kink-simple:nth-child(2),
-            #InputOverlay .widthWrapper #InputNext .kink-simple:nth-child(2) {
+            #InputOverlay .widthWrapper #InputPrevious .Para-simple:nth-child(2),
+            #InputOverlay .widthWrapper #InputNext .Para-simple:nth-child(2) {
                 background-color: #CCC;
                 font-size: 11px;
                 margin-left: 6px;
                 margin-right: 6px;
                 height: 37px;
             }
-            #InputOverlay .widthWrapper #InputPrevious .kink-simple:nth-child(3),
-            #InputOverlay .widthWrapper #InputNext .kink-simple:first-child {
+            #InputOverlay .widthWrapper #InputPrevious .Para-simple:nth-child(3),
+            #InputOverlay .widthWrapper #InputNext .Para-simple:first-child {
                 background-color: #DDD;
                 margin-left: 3px;
                 margin-right: 3px;
             }
-            #InputOverlay .widthWrapper #InputPrevious .kink-simple:first-child {
+            #InputOverlay .widthWrapper #InputPrevious .Para-simple:first-child {
                 padding-bottom: 4px;
                 padding-top: 7px;
             }
-            #InputOverlay .widthWrapper #InputNext .kink-simple:nth-child(3) {
+            #InputOverlay .widthWrapper #InputNext .Para-simple:nth-child(3) {
                 padding-top: 4px;
             }
-            #InputOverlay .widthWrapper #InputPrevious .kink-simple:nth-child(2) {
+            #InputOverlay .widthWrapper #InputPrevious .Para-simple:nth-child(2) {
                 padding-bottom: 7px;
                 padding-top: 9px;
             }
-            #InputOverlay .widthWrapper #InputNext .kink-simple:nth-child(2) {
+            #InputOverlay .widthWrapper #InputNext .Para-simple:nth-child(2) {
                 padding-top: 7px;
             }
             
-            #InputPrevious .kink-simple {
+            #InputPrevious .Para-simple {
                 border-top-left-radius: 2px;
                 border-top-right-radius: 2px;
             }
-            #InputNext .kink-simple {
+            #InputNext .Para-simple {
                 border-bottom-left-radius: 2px;
                 border-bottom-right-radius: 2px;
             }
@@ -512,7 +512,7 @@
     <body>
         <div class="widthWrapper">
             <button id="Edit"></button>
-            <h1>Kink list</h1>
+            <h1>Para list</h1>
             <div class="legend">
                 <div><span data-color="#FFFFFF" class="choice notEntered"></span> <span class="legend-text">Not Entered</span></div>
                 <div><span data-color="#6DB5FE" class="choice favorite"></span> <span class="legend-text">Favorite</span></div>
@@ -530,171 +530,67 @@
             <div id="InputList"></div>
         </div>
         <div id="EditOverlay" class="overlay">
-            <textarea id="Kinks">
-#Bodies
-(General)
-* Skinny
-* Chubby
-* Small breasts
-* Large breasts
-* Small cocks
-* Large cocks
-
-#Clothing
-(Self, Partner)
-* Clothed sex
-* Lingerie
-* Stockings
-* Heels
-* Leather
-* Latex
-* Uniform / costume
-* Cross-dressing
-
-#Groupings
-(General)
-* You and 1 male
-* You and 1 female
-* You and MtF trans
-* You and FtM trans
-* You and 1 male, 1 female
-* You and 2 males
-* You and 2 females
-* Orgy
-
-#General
-(Giving, Receiving)
-* Romance / Affection
-* Handjob / fingering
-* Blowjob
-* Deep throat
-* Swallowing
-* Facials
-* Cunnilingus
-* Face-sitting
-* Edging
-* Teasing
-* JOI, SI
-
-#Ass play
-(Giving, Receiving)
-* Anal toys
-* Anal sex, pegging
-* Rimming
-* Double penetration
-* Anal fisting
-
-#Restrictive
-(Self, Partner)
-* Gag
-* Collar
-* Leash
-* Chastity
-* Bondage (Light)
-* Bondage (Heavy)
-* Encasement
-
-#Toys
-(Self, Partner)
-* Dildos
-* Plugs
-* Vibrators
-* Sounding
-
-#Domination
-(Dominant, Submissive)
-* Dominant / Submissive
-* Domestic servitude
-* Slavery
-* Pet play
-* DD/lg, MD/lb
-* Discipline
-* Begging
-* Forced orgasm
-* Orgasm control
-* Orgasm denial
-* Power exchange
-
-#No consent
-(Aggressor, Target)
-* Non-con / rape
-* Blackmail / coercion
-* Kidnapping
-* Drugs / alcohol
-* Sleep play
-
-#Taboo
-(General)
+            <textarea id="Paras">
+                
+#The "Big" Ones
+* Zoo
+* Necro
+* MAP
+* AAM
 * Incest
-* Ageplay
-* Interracial / Raceplay
-* Bestiality
-* Necrophilia
-* Cheating
-* Exhibitionism
-* Voyeurism
+* Biasto
 
-#Surrealism
-(Self, Partner)
-* Futanari
-* Furry
-* Vore
-* Transformation
-* Tentacles
-* Monster or Alien
+#Ficto
+* Lolicon
+* Shotacon
+* Cronacon
+* Kodocon
+* Whump
+* Ficto-zoo
+* Teratophilia
 
-#Fluids
-(General)
+#Objectum
+* Dendrophilia
+* Agalmatophilia
+* Plushophilia
+* Conceptum
+
+#Bodily Fluids
+* Emetophilia
+* Klismaphilia
+* Dacryphilia
+* Omorashi
 * Blood
 * Watersports
 * Scat
 * Lactation
-* Diapers
 * Cum play
 
-#Degradation
-(Giving, Receiving)
-* Glory hole
-* Name calling
-* Humiliation
-
-#Touch & Stimulation
-(Actor, Subject)
-* Cock/Pussy worship
-* Ass worship
-* Foot play
-* Tickling
-* Sensation play
-* Electro stimulation
-
-#Misc. Fetish
-(Giving, Receiving)
-* Fisting
-* Gangbang
-* Breath play
-* Impregnation
-* Pregnancy
-* Feminization
-* Cuckold / Cuckquean
-
 #Pain
-(Giving, Receiving)
-* Light pain
-* Heavy pain
-* Nipple clamps
-* Clothes pins
-* Caning
-* Flogging
-* Beating
-* Spanking
-* Cock/Pussy slapping
-* Cock/Pussy torture
-* Hot Wax
-* Scratching
-* Biting
-* Cutting                
+* Sadism
+* Masochism
+* Traumaphilia 
+                
+#Kinks and Fetishes
+* Partialism
+* Nature Play
+* Bugchasing
+                
+#Other
+* Abasiophilia
+* Acrotomophilia
+* Robophilia
+* Somnophilia
+* Hoplophilia
+* Hybristophilia
+
+#Modifiers
+* Aego-
+* Auto-
+* Intraplural
+                
             </textarea>
-            <button id="KinksOK">Accept</button>
+            <button id="ParasOK">Accept</button>
         </div>
         <div id="InputOverlay" class="overlay">
             <div class="widthWrapper">
@@ -741,8 +637,8 @@
                 }
             };
             
-            var kinks = {};
-            var inputKinks = {}
+            var Paras = {};
+            var inputParas = {}
             var colors = {}
             var level = {};
             
@@ -750,16 +646,16 @@
                 
                 var imgurClientId = '9db53e5936cd02f';
                 
-                inputKinks = {
+                inputParas = {
                     $columns: [],
                     createCategory: function(name, fields){
-                        var $category = $('<div class="kinkCategory">')
+                        var $category = $('<div class="ParaCategory">')
                                 .addClass('cat-' + strToClass(name))
                                 .data('category', name)
                                 .append($('<h2>')
                                 .text(name));
                         
-                        var $table = $('<table class="kinkGroup">').data('fields', fields);
+                        var $table = $('<table class="ParaGroup">').data('fields', fields);
                         var $thead = $('<thead>').appendTo($table);
                         for(var i = 0; i < fields.length; i++) {
                             $('<th>').addClass('choicesCol').text(fields[i]).appendTo($thead);
@@ -788,16 +684,16 @@
                         }
                         return $container;
                     },
-                    createKink: function(fields, name){
-                        var $row = $('<tr>').data('kink', name).addClass('kinkRow');
+                    createPara: function(fields, name){
+                        var $row = $('<tr>').data('Para', name).addClass('ParaRow');
                         for(var i = 0; i < fields.length; i++) {
-                            var $choices = inputKinks.createChoice();
+                            var $choices = inputParas.createChoice();
                             $choices.data('field', fields[i]);
                             $choices.addClass('choice-' + strToClass(fields[i]));
                             $('<td>').append($choices).appendTo($row);
                         }
                         $('<td>').text(name).appendTo($row);
-                        $row.addClass('kink-' + strToClass(name));
+                        $row.addClass('Para-' + strToClass(name));
                         return $row;
                     },
                     createColumns: function(){
@@ -808,9 +704,9 @@
                         if(numCols > 4) numCols = 4;
                         var colClass = 'col' + colClasses[numCols - 1];
                         
-                        inputKinks.$columns = [];
+                        inputParas.$columns = [];
                         for(var i = 0; i < numCols; i++){
-                            inputKinks.$columns.push($('<div>').addClass('col ' + colClass).appendTo($('#InputList')));
+                            inputParas.$columns.push($('<div>').addClass('col ' + colClass).appendTo($('#InputList')));
                         }
                     },
                     placeCategories: function($categories){
@@ -823,54 +719,54 @@
                             $clone.remove();
                         }
                         
-                        var colHeight = totalHeight / (inputKinks.$columns.length);
+                        var colHeight = totalHeight / (inputParas.$columns.length);
                         var colIndex = 0;
                         for(var i = 0; i < $categories.length; i++) {
-                            var curHeight = inputKinks.$columns[colIndex].height();
+                            var curHeight = inputParas.$columns[colIndex].height();
                             var catHeight = $categories[i].height();
                             if(curHeight + (catHeight / 2) > colHeight) colIndex++;
-                            while(colIndex >= inputKinks.$columns.length) {
+                            while(colIndex >= inputParas.$columns.length) {
                                 colIndex--;
                             }
-                            inputKinks.$columns[colIndex].append($categories[i]);
+                            inputParas.$columns[colIndex].append($categories[i]);
                         }
                     },
                     fillInputList: function(){
                         $('#InputList').empty();
-                        inputKinks.createColumns();
+                        inputParas.createColumns();
                         
                         var $categories = [];
-                        var kinkCats = Object.keys(kinks);
-                        for(var i = 0; i < kinkCats.length; i++) {
-                            var catName = kinkCats[i];
-                            var category = kinks[catName];
+                        var ParaCats = Object.keys(Paras);
+                        for(var i = 0; i < ParaCats.length; i++) {
+                            var catName = ParaCats[i];
+                            var category = Paras[catName];
                             var fields = category.fields;
-                            var kinkArr = category.kinks;
+                            var ParaArr = category.Paras;
                             
-                            var $category = inputKinks.createCategory(catName, fields);
+                            var $category = inputParas.createCategory(catName, fields);
                             var $tbody = $category.find('tbody');
-                            for(var k = 0; k < kinkArr.length; k++) {
-                                $tbody.append(inputKinks.createKink(fields, kinkArr[k]));
+                            for(var k = 0; k < ParaArr.length; k++) {
+                                $tbody.append(inputParas.createPara(fields, ParaArr[k]));
                             }
                             
                             $categories.push($category);
                         }
-                        inputKinks.placeCategories($categories);
+                        inputParas.placeCategories($categories);
                         
                         // Make things update hash
                         $('#InputList').find('button.choice').on('click', function(){
-                            location.hash = inputKinks.updateHash();
+                            location.hash = inputParas.updateHash();
                         });
                     },
                     init: function(){
                         // Set up DOM
-                        inputKinks.fillInputList();
+                        inputParas.fillInputList();
                         
                         // Read hash
-                        inputKinks.parseHash();
+                        inputParas.parseHash();
                         
                         // Make export button work
-                        $('#Export').on('click', inputKinks.export);
+                        $('#Export').on('click', inputParas.export);
                         $('#URL').on('click', function(){ this.select(); });
                         
                         // On resize, redo columns
@@ -882,8 +778,8 @@
                                 lastResize = curTime;
                                 setTimeout(function(){
                                     if(lastResize === curTime) {
-                                        inputKinks.fillInputList();
-                                        inputKinks.parseHash();
+                                        inputParas.fillInputList();
+                                        inputParas.parseHash();
                                     }
                                 }, 500);
                             });
@@ -942,9 +838,9 @@
                         
                         context.font = "bold 24px Arial";
                         context.fillStyle = '#000000';
-                        context.fillText('Kinklist ' + username, 5, 25);
+                        context.fillText('Paralist ' + username, 5, 25);
                         
-                        inputKinks.drawLegend(context);
+                        inputParas.drawLegend(context);
                         return { context: context, canvas: canvas };
                     },
                     drawCallHandlers: {
@@ -962,7 +858,7 @@
                             context.font = "italic 12px Arial";
                             context.fillText(fieldsStr, drawCall.x, drawCall.y + 20);
                         },
-                        kinkRow: function(context, drawCall){
+                        ParaRow: function(context, drawCall){
                             context.fillStyle = '#000000';
                             context.font = "12px Arial";
                             
@@ -1011,14 +907,14 @@
                         };
                         
                         // Find out how many we have of everything
-                        var numCats = $('.kinkCategory').length;
-                        var dualCats = $('.kinkCategory th + th + th').length;
+                        var numCats = $('.ParaCategory').length;
+                        var dualCats = $('.ParaCategory th + th + th').length;
                         var simpleCats = numCats - dualCats;
-                        var numKinks = $('.kinkRow').length;
+                        var numParas = $('.ParaRow').length;
                         
-                        // Determine the height required for all categories and kinks
+                        // Determine the height required for all categories and Paras
                         var totalHeight = (
-                                (numKinks * rowHeight) +
+                                (numParas * rowHeight) +
                                 (dualCats * titleSubtitleHeight) +
                                 (simpleCats * simpleTitleHeight)
                         );
@@ -1033,16 +929,16 @@
                         // for the appropriate column
                         var avgColHeight = totalHeight / numCols;
                         var columnIndex = 0;
-                        $('.kinkCategory').each(function(){
+                        $('.ParaCategory').each(function(){
                             var $cat = $(this);
                             var catName = $cat.data('category');
-                            var category = kinks[catName];
+                            var category = Paras[catName];
                             var fields = category.fields;
-                            var catKinks = category.kinks;
+                            var catParas = category.Paras;
                             
                             var catHeight = 0;
                             catHeight += (fields.length === 1) ? simpleTitleHeight : titleSubtitleHeight;
-                            catHeight += (catKinks.length * rowHeight);
+                            catHeight += (catParas.length * rowHeight);
                             
                             // Determine which column to place this category in
                             if((columns[columnIndex].height + (catHeight / 2)) > avgColHeight) columnIndex++;
@@ -1066,18 +962,18 @@
                                 };
                             }
                             
-                            // Drawcalls for kinks
-                            $cat.find('.kinkRow').each(function(){
-                                var $kinkRow = $(this);
-                                var drawCall = { y: column.height, type: 'kinkRow', data: {
+                            // Drawcalls for Paras
+                            $cat.find('.ParaRow').each(function(){
+                                var $ParaRow = $(this);
+                                var drawCall = { y: column.height, type: 'ParaRow', data: {
                                         choices: [],
-                                        text: $kinkRow.data('kink')
+                                        text: $ParaRow.data('Para')
                                 }};
                                 column.drawStack.push(drawCall);
                                 column.height += rowHeight;
                                 
                                 // Add choices
-                                $kinkRow.find('.choices').each(function(){
+                                $ParaRow.find('.choices').each(function(){
                                     var $selection = $(this).find('.choice.selected');
                                     var selection = ($selection.length > 0)
                                             ? $selection.data('level')
@@ -1097,7 +993,7 @@
                         
                         var canvasWidth = offsets.left + offsets.right + (columnWidth * numCols);
                         var canvasHeight = offsets.top + offsets.bottom + tallestColumnHeight;
-                        var setup = inputKinks.setupCanvas(canvasWidth, canvasHeight, username);
+                        var setup = inputParas.setupCanvas(canvasWidth, canvasHeight, username);
                         var context = setup.context;
                         var canvas = setup.canvas;
                         
@@ -1110,7 +1006,7 @@
                                 var drawCall = drawStack[j];
                                 drawCall.x = drawX;
                                 drawCall.y += offsets.top;
-                                inputKinks.drawCallHandlers[drawCall.type](context, drawCall);
+                                inputParas.drawCallHandlers[drawCall.type](context, drawCall);
                             }
                         }
                         
@@ -1142,9 +1038,9 @@
                         });
                     },
                     encode: function(base, input){
-                        var hashBase = inputKinks.hashChars.length;
-                        var outputPow = inputKinks.maxPow(hashBase, Number.MAX_SAFE_INTEGER);
-                        var inputPow = inputKinks.maxPow(base, Math.pow(hashBase, outputPow));
+                        var hashBase = inputParas.hashChars.length;
+                        var outputPow = inputParas.maxPow(hashBase, Number.MAX_SAFE_INTEGER);
+                        var inputPow = inputParas.maxPow(base, Math.pow(hashBase, outputPow));
                         
                         var output = "";
                         var numChunks = Math.ceil(input.length / inputPow);
@@ -1164,24 +1060,24 @@
                                 var powVal = Math.pow(hashBase, maxPow);
                                 var charInt = Math.floor(inputIntValue / powVal);
                                 var subtract = charInt * powVal;
-                                var char = inputKinks.hashChars[charInt];
+                                var char = inputParas.hashChars[charInt];
                                 outputCharValue += char;
                                 inputIntValue -= subtract;
                             }
-                            var chunk = inputKinks.prefix(outputCharValue, outputPow, inputKinks.hashChars[0]);
+                            var chunk = inputParas.prefix(outputCharValue, outputPow, inputParas.hashChars[0]);
                             output += chunk;
                         }
                         return output;
                     },
                     decode: function(base, output){
-                        var hashBase = inputKinks.hashChars.length;
-                        var outputPow = inputKinks.maxPow(hashBase, Number.MAX_SAFE_INTEGER);
+                        var hashBase = inputParas.hashChars.length;
+                        var outputPow = inputParas.maxPow(hashBase, Number.MAX_SAFE_INTEGER);
                         
                         var values = [];
                         var numChunks = Math.max(output.length / outputPow)
                         for(var i = 0; i < numChunks; i++){
                             var chunk = output.substring(i * outputPow, (i + 1) * outputPow);
-                            var chunkValues = inputKinks.decodeChunk(base, chunk);
+                            var chunkValues = inputParas.decodeChunk(base, chunk);
                             for(var j = 0; j < chunkValues.length; j++) {
                                 values.push(chunkValues[j]);
                             }
@@ -1189,14 +1085,14 @@
                         return values;
                     },
                     decodeChunk: function(base, chunk){
-                        var hashBase = inputKinks.hashChars.length;
-                        var outputPow = inputKinks.maxPow(hashBase, Number.MAX_SAFE_INTEGER);
-                        var inputPow = inputKinks.maxPow(base, Math.pow(hashBase, outputPow));
+                        var hashBase = inputParas.hashChars.length;
+                        var outputPow = inputParas.maxPow(hashBase, Number.MAX_SAFE_INTEGER);
+                        var inputPow = inputParas.maxPow(base, Math.pow(hashBase, outputPow));
                         
                         var chunkInt = 0;
                         for(var i = 0; i < chunk.length; i++) {
                             var char = chunk[i];
-                            var charInt = inputKinks.hashChars.indexOf(char);
+                            var charInt = inputParas.hashChars.indexOf(char);
                             var pow = chunk.length - 1 - i;
                             var intVal = Math.pow(hashBase, pow) * charInt;
                             chunkInt += intVal;
@@ -1222,13 +1118,13 @@
                             if(!lvlInt) lvlInt = 0;
                             hashValues.push(lvlInt);
                         });
-                        return inputKinks.encode(Object.keys(colors).length, hashValues);
+                        return inputParas.encode(Object.keys(colors).length, hashValues);
                     },
                     parseHash: function(){
                         var hash = location.hash.substring(1);
                         if(hash.length < 10) return;
                         
-                        var values = inputKinks.decode(Object.keys(colors).length, hash);
+                        var values = inputParas.decode(Object.keys(colors).length, hash);
                         var valueIndex = 0;
                         $('#InputList .choices').each(function(){
                             var $this = $(this);
@@ -1243,30 +1139,30 @@
                             var selector = '.' + this.className.replace(/ /g, '.');
                             // .choices selector
                             selector = '.' + $(this).closest('.choices')[0].className.replace(/ /g, '.') + ' ' + selector;
-                            // .kinkRow selector
-                            selector = '.' + $(this).closest('tr.kinkRow')[0].className.replace(/ /g, '.') + ' ' + selector;
-                            // .kinkCategory selector
-                            selector = '.' + $(this).closest('.kinkCategory')[0].className.replace(/ /g, '.') + ' ' + selector;
+                            // .ParaRow selector
+                            selector = '.' + $(this).closest('tr.ParaRow')[0].className.replace(/ /g, '.') + ' ' + selector;
+                            // .ParaCategory selector
+                            selector = '.' + $(this).closest('.ParaCategory')[0].className.replace(/ /g, '.') + ' ' + selector;
                             selector = selector.replace('.selected', '');
                             selection.push(selector);
                         });
                         return selection;
                     },
                     inputListToText: function(){
-                        var KinksText = "";
-                        var kinkCats = Object.keys(kinks);
-                        for(var i = 0; i < kinkCats.length; i++){
-                            var catName = kinkCats[i];
-                            var catFields = kinks[catName].fields;
-                            var catKinks = kinks[catName].kinks;
-                            KinksText += '#' + catName + "\r\n";
-                            KinksText += '(' + catFields.join(', ') + ")\r\n";
-                            for(var j = 0; j < catKinks.length; j++){
-                                KinksText += '* ' + catKinks[j] + "\r\n";
+                        var ParasText = "";
+                        var ParaCats = Object.keys(Paras);
+                        for(var i = 0; i < ParaCats.length; i++){
+                            var catName = ParaCats[i];
+                            var catFields = Paras[catName].fields;
+                            var catParas = Paras[catName].Paras;
+                            ParasText += '#' + catName + "\r\n";
+                            ParasText += '(' + catFields.join(', ') + ")\r\n";
+                            for(var j = 0; j < catParas.length; j++){
+                                ParasText += '* ' + catParas[j] + "\r\n";
                             }
-                            KinksText += "\r\n";
+                            ParasText += "\r\n";
                         }
-                        return KinksText;
+                        return ParasText;
                     },
                     restoreSavedSelection: function(selection){
                         setTimeout(function(){
@@ -1274,12 +1170,12 @@
                                 var selector = selection[i];
                                 $(selector).addClass('selected');
                             }
-                            location.hash = inputKinks.updateHash();
+                            location.hash = inputParas.updateHash();
                         }, 300);
                     },
-                    parseKinksText: function(kinksText){
-                        var newKinks = {};
-                        var lines = kinksText.replace(/\r/g, '').split("\n");
+                    parseParasText: function(ParasText){
+                        var newParas = {};
+                        var lines = ParasText.replace(/\r/g, '').split("\n");
 
                         var cat = null;
                         var catName = null;
@@ -1293,14 +1189,14 @@
                                         alert(catName + ' does not have any fields defined!');
                                         return;
                                     }
-                                    if(!(cat.kinks instanceof Array) || cat.kinks.length < 1){
-                                        alert(catName + ' does not have any kinks listed!');
+                                    if(!(cat.Paras instanceof Array) || cat.Paras.length < 1){
+                                        alert(catName + ' does not have any Paras listed!');
                                         return;
                                     }
-                                    newKinks[catName] = cat;
+                                    newParas[catName] = cat;
                                 }
                                 catName = line.substring(1).trim();
-                                cat = { kinks: [] };
+                                cat = { Paras: [] };
                             }
                             if(!catName) continue;
                             if(line[0] === '(') {
@@ -1310,45 +1206,45 @@
                                 }
                             }
                             if(line[0] === '*'){
-                                var kink = line.substring(1).trim();
-                                cat.kinks.push(kink);
+                                var Para = line.substring(1).trim();
+                                cat.Paras.push(Para);
                             }
                         }
-                        if(catName && !newKinks[catName]){
+                        if(catName && !newParas[catName]){
                             if(!(cat.fields instanceof Array) || cat.fields.length < 1){
                                 alert(catName + ' does not have any fields defined!');
                                 return;
                             }
-                            if(!(cat.kinks instanceof Array) || cat.kinks.length < 1){
-                                alert(catName + ' does not have any kinks listed!');
+                            if(!(cat.Paras instanceof Array) || cat.Paras.length < 1){
+                                alert(catName + ' does not have any Paras listed!');
                                 return;
                             }
-                            newKinks[catName] = cat;
+                            newParas[catName] = cat;
                         }
-                        return newKinks;
+                        return newParas;
                     }
                 };
 
                 $('#Edit').on('click', function(){
-                    var KinksText = inputKinks.inputListToText();
-                    $('#Kinks').val(KinksText.trim());
+                    var ParasText = inputParas.inputListToText();
+                    $('#Paras').val(ParasText.trim());
                     $('#EditOverlay').fadeIn();
                 });
                 $('#EditOverlay').on('click', function(){
                     $(this).fadeOut();
                 });
-                $('#KinksOK').on('click', function(){
-                    var selection = inputKinks.saveSelection();
+                $('#ParasOK').on('click', function(){
+                    var selection = inputParas.saveSelection();
                     try {
-                        var kinksText = $('#Kinks').val();
-                        kinks = inputKinks.parseKinksText(kinksText);
-                        inputKinks.fillInputList();
+                        var ParasText = $('#Paras').val();
+                        Paras = inputParas.parseParasText(ParasText);
+                        inputParas.fillInputList();
                     }
                     catch(e){
                         alert('An error occured trying to parse the text entered, please correct it and try again');
                         return;
                     }
-                    inputKinks.restoreSavedSelection(selection);
+                    inputParas.restoreSavedSelection(selection);
                     $('#EditOverlay').fadeOut();
                 });
                 $('.overlay > *').on('click', function(e){
@@ -1368,8 +1264,8 @@
                     level[text] = cssClass;
                 });
         
-                kinks = inputKinks.parseKinksText($('#Kinks').text().trim());
-                inputKinks.init();
+                Paras = inputParas.parseParasText($('#Paras').text().trim());
+                inputParas.init();
                 
                 (function(){
                     var $popup = $('#InputOverlay');
@@ -1386,31 +1282,31 @@
                         return $selected.data('level');
                     }
 
-                    function getChoicesElement(category, kink, field){
+                    function getChoicesElement(category, Para, field){
                         var selector = '.cat-' + strToClass(category);
-                        selector += ' .kink-' + strToClass(kink);
+                        selector += ' .Para-' + strToClass(Para);
                         selector += ' .choice-' + strToClass(field);
 
                         var $choices = $(selector);
                         return $choices;
                     }
 
-                    inputKinks.getAllKinks = function(){
+                    inputParas.getAllParas = function(){
                         var list = [];
 
-                        var categories = Object.keys(kinks);
+                        var categories = Object.keys(Paras);
                         for(var i = 0; i < categories.length; i++){
                             var category = categories[i];
-                            var fields = kinks[category].fields;
-                            var kinkArr = kinks[category].kinks;
+                            var fields = Paras[category].fields;
+                            var ParaArr = Paras[category].Paras;
 
                             for(var j = 0; j < fields.length; j++) {
                                 var field = fields[j];
-                                for(var k = 0; k < kinkArr.length; k++){
-                                    var kink = kinkArr[k];
-                                    var $choices = getChoicesElement(category, kink, field);
+                                for(var k = 0; k < ParaArr.length; k++){
+                                    var Para = ParaArr[k];
+                                    var $choices = getChoicesElement(category, Para, field);
                                     var value = getChoiceValue($choices);
-                                    var obj = { category: category, kink: kink, field: field, value: value, $choices: $choices, showField: (fields.length >= 2)};
+                                    var obj = { category: category, Para: Para, field: field, value: value, $choices: $choices, showField: (fields.length >= 2)};
                                     list.push(obj);
                                 }
                             }
@@ -1419,16 +1315,16 @@
                         return list;
                     };
 
-                    inputKinks.inputPopup = {
+                    inputParas.inputPopup = {
                         numPrev: 3,
                         numNext: 3,
-                        allKinks: [],
-                        kinkByIndex: function(i){
-                            var numKinks = inputKinks.inputPopup.allKinks.length;
-                            i = (numKinks + i) % numKinks;
-                            return inputKinks.inputPopup.allKinks[i];
+                        allParas: [],
+                        ParaByIndex: function(i){
+                            var numParas = inputParas.inputPopup.allParas.length;
+                            i = (numParas + i) % numParas;
+                            return inputParas.inputPopup.allParas[i];
                         },
-                        generatePrimary: function(kink){
+                        generatePrimary: function(Para){
                             var $container = $('<div>');
                             var btnIndex = 0;
                             $('.legend > div').each(function(){
@@ -1442,32 +1338,32 @@
                                         .appendTo($btn)
 
                                 var text = $btn.text().trim().replace(/[0-9]/g, '');
-                                if(kink.value === text) {
+                                if(Para.value === text) {
                                     $btn.addClass('selected');
                                 }
 
                                 $btn.on('click', function(){
                                     $container.find('.big-choice').removeClass('selected');
                                     $btn.addClass('selected');
-                                    kink.value = text;
+                                    Para.value = text;
                                     $options.fadeOut(200, function(){
                                         $options.show();
-                                        inputKinks.inputPopup.showNext();
+                                        inputParas.inputPopup.showNext();
                                     });
                                     var choiceClass = strToClass(text);
-                                    kink.$choices.find('.' + choiceClass).click();
+                                    Para.$choices.find('.' + choiceClass).click();
                                 });
                             });
                             return $container;
                         },
-                        generateSecondary: function(kink){
-                            var $container = $('<div class="kink-simple">');
-                            $('<span class="choice">').addClass(level[kink.value]).appendTo($container);
-                            $('<span class="txt-category">').text(kink.category).appendTo($container);
-                            if(kink.showField){
-                                $('<span class="txt-field">').text(kink.field).appendTo($container);
+                        generateSecondary: function(Para){
+                            var $container = $('<div class="Para-simple">');
+                            $('<span class="choice">').addClass(level[Para.value]).appendTo($container);
+                            $('<span class="txt-category">').text(Para.category).appendTo($container);
+                            if(Para.showField){
+                                $('<span class="txt-field">').text(Para.field).appendTo($container);
                             }
-                            $('<span class="txt-kink">').text(kink.kink).appendTo($container);
+                            $('<span class="txt-Para">').text(Para.Para).appendTo($container);
                             return $container;
                         },
                         showIndex: function(index){
@@ -1477,32 +1373,32 @@
                             $popup.data('index', index);
 
                             // Current
-                            var currentKink = inputKinks.inputPopup.kinkByIndex(index);
-                            var $currentKink = inputKinks.inputPopup.generatePrimary(currentKink);
-                            $options.append($currentKink);
-                            $category.text(currentKink.category);
-                            $field.text((currentKink.showField ? '(' + currentKink.field + ') ' : '') + currentKink.kink);
-                            $options.append($currentKink);
+                            var currentPara = inputParas.inputPopup.ParaByIndex(index);
+                            var $currentPara = inputParas.inputPopup.generatePrimary(currentPara);
+                            $options.append($currentPara);
+                            $category.text(currentPara.category);
+                            $field.text((currentPara.showField ? '(' + currentPara.field + ') ' : '') + currentPara.Para);
+                            $options.append($currentPara);
 
                             // Prev
-                            for(var i = inputKinks.inputPopup.numPrev; i > 0; i--){
-                                var prevKink = inputKinks.inputPopup.kinkByIndex(index - i);
-                                var $prevKink = inputKinks.inputPopup.generateSecondary(prevKink);
-                                $previous.append($prevKink);
+                            for(var i = inputParas.inputPopup.numPrev; i > 0; i--){
+                                var prevPara = inputParas.inputPopup.ParaByIndex(index - i);
+                                var $prevPara = inputParas.inputPopup.generateSecondary(prevPara);
+                                $previous.append($prevPara);
                                 (function(skip){
-                                    $prevKink.on('click', function(){
-                                        inputKinks.inputPopup.showPrev(skip);
+                                    $prevPara.on('click', function(){
+                                        inputParas.inputPopup.showPrev(skip);
                                     });
                                 })(i);
                             }
                             // Next
-                            for(var i = 1; i <= inputKinks.inputPopup.numNext; i++){
-                                var nextKink = inputKinks.inputPopup.kinkByIndex(index + i);
-                                var $nextKink = inputKinks.inputPopup.generateSecondary(nextKink);
-                                $next.append($nextKink);
+                            for(var i = 1; i <= inputParas.inputPopup.numNext; i++){
+                                var nextPara = inputParas.inputPopup.ParaByIndex(index + i);
+                                var $nextPara = inputParas.inputPopup.generateSecondary(nextPara);
+                                $next.append($nextPara);
                                 (function(skip){
-                                    $nextKink.on('click', function(){
-                                        inputKinks.inputPopup.showNext(skip);
+                                    $nextPara.on('click', function(){
+                                        inputParas.inputPopup.showNext(skip);
                                     });
                                 })(i);
                             }
@@ -1510,20 +1406,20 @@
                         showPrev: function(skip){
                             if(typeof skip !== "number") skip = 1;
                             var index = $popup.data('index') - skip;
-                            var numKinks = inputKinks.inputPopup.allKinks.length;
-                            index = (numKinks + index) % numKinks;
-                            inputKinks.inputPopup.showIndex(index);
+                            var numParas = inputParas.inputPopup.allParas.length;
+                            index = (numParas + index) % numParas;
+                            inputParas.inputPopup.showIndex(index);
                         },
                         showNext: function(skip){
                             if(typeof skip !== "number") skip = 1;
                             var index = $popup.data('index') + skip;
-                            var numKinks = inputKinks.inputPopup.allKinks.length;
-                            index = (numKinks + index) % numKinks;
-                            inputKinks.inputPopup.showIndex(index);
+                            var numParas = inputParas.inputPopup.allParas.length;
+                            index = (numParas + index) % numParas;
+                            inputParas.inputPopup.showIndex(index);
                         },
                         show: function(){
-                            inputKinks.inputPopup.allKinks = inputKinks.getAllKinks();
-                            inputKinks.inputPopup.showIndex(0);
+                            inputParas.inputPopup.allParas = inputParas.getAllParas();
+                            inputParas.inputPopup.showIndex(0);
                             $popup.fadeIn();
                         }
                     };
@@ -1533,12 +1429,12 @@
                         if(!$popup.is(':visible')) return;
 
                         if(e.keyCode === 38) {
-                            inputKinks.inputPopup.showPrev();
+                            inputParas.inputPopup.showPrev();
                             e.preventDefault();
                             e.stopPropagation();
                         }
                         if(e.keyCode === 40) {
-                            inputKinks.inputPopup.showNext();
+                            inputParas.inputPopup.showNext();
                             e.preventDefault();
                             e.stopPropagation();
                         }
@@ -1557,7 +1453,7 @@
                         var $btn = $options.find('.big-choice').eq(btn);
                         $btn.click();
                     });
-                    $('#StartBtn').on('click', inputKinks.inputPopup.show);
+                    $('#StartBtn').on('click', inputParas.inputPopup.show);
                     $('#InputCurrent .closePopup, #InputOverlay').on('click', function(){
                         $popup.fadeOut();
                     });                    
